@@ -9,8 +9,8 @@ on:
 
 permissions:
   pull-requests: write
-  issues: write
-  repository-projects: write
+  contents: read
+  packages: write
   pages: write
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Auto green
         run: |
