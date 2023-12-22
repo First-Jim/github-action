@@ -3,15 +3,11 @@ name: ci
 on:
   push:
     branches:
-      - main
+      - deploy
   schedule:
     - cron: "0 0 * * *"
 
-permissions:
-  pull-requests: write
-  contents: read
-  packages: write
-  pages: write
+permissions: write-all
 
 jobs:
   autogreen:
